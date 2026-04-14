@@ -5,6 +5,189 @@ Each section below corresponds to one save operation, newest first.
 
 ---
 
+## 2026-04-14 07:53 UTC
+
+**Output file:** `fparam_beta07_test_can_vs_ustory.nc`  
+**Baseline:**    `/users/rkouwenh/fates_params/fparam_beta07_test_crown_esc_v2.nc`  
+
+**Notes:** implemented first iteration of understory vs canopy parametrization
+
+### Changed variables
+
+#### `fates_leaf_slatop`
+*Specific Leaf Area (SLA) at top of canopy, projected area basis* (units: m^2/gC)
+
+| PFT index | New value |
+|-----------|-----------|
+| 16 | 0.022 |
+| 17 | 0.024 |
+| 18 | 0.027 |
+
+<details><summary>Full array after change</summary>
+
+```
+[0.024 0.005 0.024 0.009 0.03  0.03  0.012 0.03  0.03  0.01  0.032 0.027
+ 0.05  0.05  0.022 0.024 0.027 0.05 ]
+```
+
+</details>
+
+#### `fates_stoich_nitr`
+*target nitrogen concentration (ratio with carbon) of organs* (units: gN/gC)
+
+| PFT index | New value |
+|-----------|-----------|
+| 2 | 0.045 |
+| 3 | 0.033 |
+| 4 | 0.06 |
+
+<details><summary>Full array after change</summary>
+
+```
+[[3.3e-02 2.9e-02 4.0e-02 3.3e-02 4.0e-02 4.0e-02 3.3e-02 4.0e-02 4.0e-02
+  3.3e-02 4.0e-02 4.0e-02 4.0e-02 4.0e-02 4.5e-02 3.3e-02 6.0e-02 4.0e-02]
+ [2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02
+  2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02 2.4e-02]
+ [1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08
+  1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08 1.0e-08]
+ [4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03
+  4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03 4.7e-03]]
+```
+
+</details>
+
+#### `fates_leaf_vcmax25top`
+*maximum carboxylation rate of Rub. at 25C, canopy top* (units: umol CO2/m^2/s)
+
+| PFT index | New value |
+|-----------|-----------|
+| -1 | 55 |
+| 0 | 60 |
+| 1 | 20 |
+
+<details><summary>Full array after change</summary>
+
+```
+[[47.59 62.   39.   61.   58.   58.   62.   54.   54.   38.   54.   86.
+  78.   78.   55.   60.   20.   78.  ]]
+```
+
+</details>
+
+#### `fates_turnover_leaf_canopy`
+*Leaf longevity (ie turnover timescale) of canopy plants. For drought-deciduous PFTs, this also indicates the maximum length of the growing (i.e., leaves on) season.* (units: yr)
+
+| PFT index | New value |
+|-----------|-----------|
+| -1 | 1.25 |
+| 0 | 1.5 |
+| 1 | 1.1 |
+
+<details><summary>Full array after change</summary>
+
+```
+[[1.5  4.   1.   1.5  1.   1.   1.5  1.   1.   1.5  1.   1.   1.   1.
+  1.25 1.5  1.1  1.  ]]
+```
+
+</details>
+
+#### `fates_turnover_leaf_ustory`
+*Leaf longevity (ie turnover timescale) of understory plants.* (units: yr)
+
+| PFT index | New value |
+|-----------|-----------|
+| -1 | 1.75 |
+| 0 | 2.5 |
+| 1 | 2.5 |
+
+<details><summary>Full array after change</summary>
+
+```
+[[2.5  4.   1.   1.5  1.   1.   1.5  1.   1.   1.5  1.   1.   1.   1.
+  1.75 2.5  2.5  1.  ]]
+```
+
+</details>
+
+#### `fates_allom_agb_frac`
+*Fraction of woody biomass that is above ground* (units: fraction)
+
+| PFT index | New value |
+|-----------|-----------|
+| 16 | 0.725 |
+| 17 | 0.6 |
+| 18 | 0.8 |
+
+<details><summary>Full array after change</summary>
+
+```
+[0.6   0.6   0.6   0.6   0.6   0.6   0.6   0.6   0.6   0.6   0.6   1.
+ 1.    1.    0.725 0.6   0.8   1.   ]
+```
+
+</details>
+
+#### `fates_wood_density`
+*mean density of woody tissue in plant* (units: g/cm3)
+
+| PFT index | New value |
+|-----------|-----------|
+| 16 | 0.525 |
+| 17 | 0.5483 |
+| 18 | 0.42 |
+
+<details><summary>Full array after change</summary>
+
+```
+[0.548327 0.44235  0.454845 0.754336 0.548327 0.566452 0.7      0.7
+ 0.7      0.7      0.7      0.7      0.7      0.7      0.525    0.5483
+ 0.42     0.7     ]
+```
+
+</details>
+
+#### `fates_allom_d2h2`
+*Parameter 2 for d2h allometry (slope, or m)* (units: variable)
+
+| PFT index | New value |
+|-----------|-----------|
+| 16 | 0.8124 |
+| 17 | 0.8124 |
+| 18 | 0.61 |
+
+<details><summary>Full array after change</summary>
+
+```
+[0.8124383 0.752377  0.9471302 1.1146973 0.8124383 0.9734088 0.37
+ 0.37      0.37      0.2316113 0.4027002 0.6384    0.6384    0.4235
+ 0.8124    0.8124    0.61      0.4235   ]
+```
+
+</details>
+
+#### `fates_allom_d2bl1`
+*Parameter 1 for d2bl allometry* (units: variable)
+
+| PFT index | New value |
+|-----------|-----------|
+| 16 | 0.04 |
+| 17 | 0.04 |
+| 18 | 0.046 |
+
+<details><summary>Full array after change</summary>
+
+```
+[0.04      0.07      0.07      0.01      0.04      0.07      0.07
+ 0.07      0.07      0.0481934 0.0481934 0.0004    0.0004    0.0012
+ 0.04      0.04      0.046     0.0012   ]
+```
+
+</details>
+
+
+---
+
 ## 2026-04-14 07:46 UTC
 
 **Output file:** `fparam_beta07_test_can_vs_ustory.nc`  
